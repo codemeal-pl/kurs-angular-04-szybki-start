@@ -1,0 +1,11 @@
+<p>
+  <button (click)="addSandwich()">Make sandwich</button>
+</p>
+
+<app-sandwich
+  [index]="idx"
+  (remove)="removeSandwich($event)"
+  *ngFor="let sandwitch of sandwiches; index as idx">
+</app-sandwich>
+
+<p *ngIf="message">{{ message }}</p>
